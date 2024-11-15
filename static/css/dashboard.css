@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 70px;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-icon {
+    position: relative;
+}
+
+.profile-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-options {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #34495E;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100px;
+}
+
+.profile-icon:hover .profile-options {
+    display: block;
+}
+
+.profile-options a {
+    display: block;
+    color: #ECF0F1;
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+}
+
+.profile-options a:hover {
+    background-color: #1A252F;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ECF0F1;
+}
+
+.add-skill-button {
+    display: inline-block;
+    background-color: #3498DB;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.topic {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.topic h4 {
+    margin: 0 0 10px;
+}
+
+.replies {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.reply {
+    background-color: #f4f4f4;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    height: 50px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reply</title>
+</head>
+<body>
+    <h1>Post a Reply</h1>
+    <form action="{{ url_for('reply', topic_id=topic_id) }}" method="POST">
+        <textarea name="reply_content" required placeholder="Enter your reply here..."></textarea>
+        <button type="submit">Submit Reply</button>
+    </form>
+</body>
+</html>

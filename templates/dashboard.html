@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile-icon">
+            <img src="{{ url_for('static', filename='profile_pics/' + current_user.profile_pic) }}" alt="Profile Icon">
+            <div class="profile-options">
+                <a href="{{ url_for('profile', user_id=current_user.id) }}">Open Profile</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <h2>Topics</h2>
+        <a href="{{ url_for('create_topic') }}" class="add-skill-button">Add Skill</a>
+
+        {% for topic_data in topic_data %}
+            <div class="topic">
+                <h4>{{ topic_data.topic[1] }}</h4>
+                <p>{{ topic_data.topic[2] }}</p>
+                <p><strong>Posted by:</strong> <a href="{{ url_for('profile', user_id=topic_data.topic[4]) }}">{{ topic_data.topic[3] }}</a></p>
+                
+                <div class="replies">
+                    {% if topic_data.replies %}
+                        {% for reply in topic_data.replies %}
+                            <div class="reply">
+                                <strong>{{ reply[2] }}:</strong> {{ reply[1] }}
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p>No replies yet.</p>
+                    {% endif %}
+                    
+                    <form action="{{ url_for('reply', topic_id=topic_data.topic[0]) }}" method="post">
+                        <textarea name="reply_content" placeholder="Add a reply..." required></textarea>
+                        <button type="submit">Reply</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

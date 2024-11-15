@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+    <title>{{ profile[0] }}'s Profile</title>
+</head>
+<body>
+    <h1>{{ profile[0] }}'s Profile</h1>
+    <div class="profile-container">
+        <img src="{{ url_for('static', filename='profile_pics/' + profile[1]) }}" alt="Profile Picture" class="profile-pic">
+    </div>
+</body>
+</html>
