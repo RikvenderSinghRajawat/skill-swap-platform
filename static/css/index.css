@@ -1,14 +1,36 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #f9f9f9; /* Light background for better contrast */
+    color: #333; /* Dark text color for readability */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding around the body */
+    background-image: url('https://thumbs.dreamstime.com/b/full-body-pigeon-bird-paper-letter-message-hanging-bre-breast-communication-theme-90366230.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
 }
 
 h1 {
-    margin: 20px;
+    margin: 20px 0; /* Vertical margin for spacing */
+    font-size: 2.5em; /* Larger font size for the heading */
+    color: rgba(255, 255, 255, 0.9); /* Light color for the heading for contrast */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
 a {
     margin: 10px;
     text-decoration: none;
-    color: blue;
+    color: #4A90E2; /* Consistent link color */
+    font-weight: bold; /* Make links bold */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border: 2px solid #4A90E2; /* Border around the links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for links */
+}
+
+a:hover {
+    background-color: #4A90E2; /* Change background on hover */
+    color: white; /* Change text color on hover */
 }
